@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources :blogs do
+    resources :comments
     collection do   # idなどを必要としない固有のルーティング
       post :confirm
     end
